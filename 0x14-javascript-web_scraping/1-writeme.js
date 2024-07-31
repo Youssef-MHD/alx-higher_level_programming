@@ -1,9 +1,17 @@
 #!/usr/bin/node
-// write data in a file from arg
 const fs = require('fs');
 
-if (process.argv.length > 3) {
-  fs.writeFile(process.argv[2], process.argv[3], (error) => {
-    if (error) console.log(error);
-  });
+// Check if the file path is provided as a command-line argument
+if (process.argv.length !== 4) {
+  console.error('Usage: node 1-writeme.js <file-path> "content"');
+  process.exit(1);
 }
+
+const filePath = process.argv[2];
+const contentToWrite = process.argv[3];
+
+fs.writeFile(filePath, contentToWrite, 'utf-8', err => {
+  if (err) {
+    console.error(err);
+  }
+});

@@ -1,19 +1,30 @@
 #!/usr/bin/node
-// get request
 const request = require('request');
+
+if (process.argv.length !== 3) {
+  console.error('Usage: ./100-starwars_characters.js <Movie-ID>');
+  process.exit(1);
+}
+
 const movieId = process.argv[2];
-if (!movieId) process.exit();
+const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
-const filmsURL = 'https://swapi-api.alx-tools.com/api/films/' + movieId;
+request(apiUrl, (error, response, body) => {
+  if (error) {
+    console.error(error);
+  } else if (response.statusCode !== 200) {
+    console.error(`Error: ${response.statusCode}`);
+  } else {
+    const movieData = JSON.parse(body);
+    const characterUrls = movieData.characters;
 
-request.get(filmsURL, (error, response, body) => {
-  if (!error && response.statusCode === 200) {
-    const charactersInMovie = JSON.parse(body).characters;
-    for (const char of charactersInMovie) {
-      request.get(char, (error, response, body) => {
-        if (error) console.log(error);
-        else console.log(JSON.parse(body).name);
+    characterUrls.forEach((characterUrl) => {
+      request(characterUrl, (charError, charResponse, charBody) => {
+        if (!charError && charResponse.statusCode === 200) {
+          const characterData = JSON.parse(charBody);
+          console.log(characterData.name);
+        }
       });
-    }
+    });
   }
 });
