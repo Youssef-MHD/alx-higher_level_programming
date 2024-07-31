@@ -1,86 +1,31 @@
-# Javascript - Objects, Scopes and and Closures
+# Project: 0x14. JavaScript - Web scraping
 
-## Function Prototypes :floppy_disk:
+## Resources
 
-Prototypes for functions written in this project:
+#### Read or watch:
 
-| File               | Prototype                                               |
-| ------------------ | ------------------------------------------------------- |
-| `7-occurrences.js` | `exports.nbOccurences = function (list, searchElement)` |
-| `8-esrever.js`     | `exports.esrever = function (list)`                     |
-| `9-logme.js`       | `exports.logMe = function (item)`                       |
-| `10-converter.js`  | `exports.converter = function (base)`                   |
+* [Working with JSON data](https://intranet.alxswe.com/rltoken/ONv-sSv-FA87Mc5rMZmO6A)
+* [The workflow of accessing the attributes of a simply-created JSON object by Jimmy Tran from Cohort 1 - San Francisco](https://intranet.alxswe.com/rltoken/zm0h7FqpQCZZpPZqxxwLxA)
+* [request module](https://intranet.alxswe.com/rltoken/goymbxGy-cTc5ZdKBTUcTQ)
+* [Modern JS](https://intranet.alxswe.com/rltoken/j2PStAUtVPdXKwrrFxpt0g)
+## Learning Objectives
 
+### General
 
-## Tasks :page_with_curl:
+* Why JavaScript programming is amazing
+* How to manipulate JSON data
+* How to use <code>request</code> and fetch API
+* How to read and write a file using <code>fs</code> module
+## Tasks
 
-* **0. Rectangle #0**
-  * [0-rectangle.js](./0-rectangle.js): JavaScript script that defines an empty
-  class `Rectangle`.
-
-* **1. Rectangle #1**
-  * [1-rectangle.js](./1-rectangle.js): JavaScript script that defines a class
-  `Rectangle`. Builds on [0-rectangle.js](./0-rectangle.js) with:
-    * Constructor that initializes instance attributes `width` and `height` with
-    given parameters `w` and `h`.
-
-* **2. Rectangle #2**
-  * [2-rectangle.js](./2-rectangle.js): JavaScript script that defines a class
-  `Rectangle`. Builds on [1-rectangle.js](./1-rectangle.js) with:
-    * If provided `w` and `h` are less than or equal to `0`, creates an empty object.
-
-* **3. Rectangle #3**
-  * [3-rectangle.js](./3-rectangle.js): JavaScript script that defines a class
-  `Rectangle`. Builds on [3-rectangle.js](./3-rectangle.js) with:
-    * Instance method `print()` that prints the rectangle using the `X` character.
-
-* **4. Rectangle #4**
-  * [4-rectangle.js](./4-rectangle.js): JavaScript script that defines a class
-  `Rectangle`. Builds on [4-rectangle.js](./4-rectangle.js) with:
-    * Instance method `rotate()` that swaps the `width` and `height` of the `Rectangle`.
-    * Instance method `double()` that multiplies the `width` and `height` of the
-    `Rectangle` by `2`.
-
-* **5. Square #0**
-  * [5-square.js](./5-square.js): JavaScript script that defines a class `Square`
-  that inherits from `Rectangle`.
-    * Constructor takes one argument `size`.
-
-* **6. Square #1**
-  * [6-square.js](./6-square.js): JavaScript script that defines a class `Square`
-  that inherits from `Rectangle`. Builds on [5-square.js](./5-square.js) with:
-    * Instance method `charPrint(c)` that prints the `Square` using the character
-    `c`.
-    * If `c` is `undefined`, uses the character `X`.
-
-* **7. Occurrences**
-  * [7-occurrences.js](./7-occurrences.js): JavaScript function that returns the
-  number of occurrences in a list.
-
-* **8. Esrever**
-  * [8-esrever.js](./8-esrever.js): JavaScript function that reverses a list.
-
-* **9. Log me**
-  * [9-logme.js](./9-logme.js): JavaScript function that prints the number of
-  arguments already printed as well as the new argument value.
-  * Output: `<number arguments already printed>: <current argument value>`
-
-* **10. Number conversion**
-  * [10-converter.js](./10-converter.js): JavaScript function that converts a number
-  from base 10 to another base passed as argument.
-
-* **11. Factor index**
-  * [100-map.js](./100-map.js): JavaScript script that imports an array and creates
-  a new array with each value equal to the value of initial list times the index of
-  the new list.
-  * Prints both the initial and new list.
-
-* **12. Sorted occurences**
-  * [101-sorted.js](./101-sorted.js): JavaScript script that imports a dictionary
-  of occurrences by user ID and computes a new dictionary of user ID's by occurrences.
-  * Prints the new dictionary.
-
-* **13. Concat files**
-  * [102-concat.js](./102-concat.js): JavaScript script that concatenates two files
-  passed as arguments into a file specifed as the third argument.
-  * Usage: `./102-concat.js fileA fileB fileC`.
+| Task | File |
+| ---- | ---- |
+| 0. Readme | [0-readme.js](./0-readme.js) |
+| 1. Write me | [1-writeme.js](./1-writeme.js) |
+| 2. Status code | [2-statuscode.js](./2-statuscode.js) |
+| 3. Star wars movie title | [3-starwars_title.js](./3-starwars_title.js) |
+| 4. Star wars Wedge Antilles | [4-starwars_count.js](./4-starwars_count.js) |
+| 5. Loripsum | [5-request_store.js](./5-request_store.js) |
+| 6. How many completed? | [6-completed_tasks.js](./6-completed_tasks.js) |
+| 7. Who was playing in this movie? | [100-starwars_characters.js](./100-starwars_characters.js) |
+| 8. Right order | [101-starwars_characters.js](./101-starwars_characters.js) |
